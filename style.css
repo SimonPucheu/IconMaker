@@ -1,0 +1,49 @@
+html {
+    font-family: monospace;
+}
+
+body {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+
+nav#side {
+    border-right: 1px solid black;
+    /* box-shadow: 0 0 0 25px; */
+}
+
+h1 {
+    text-align: center;
+}
+
+input,
+button {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    color: black;
+    height: 30px;
+    padding: 0;
+    outline: none;
+}
+
+canvas {
+    border: 2px dashed black;
+}
+
+.hide {
+    display: none;
+}
+
+main {
+    overflow-y: scroll;
+}
+
+main div {
+    overflow-x: scroll;
+}

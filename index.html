@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <script src="src/jszip.min.js"></script>
+    <title>Icon Maker</title>
+</head>
+
+<body>
+    <nav id="side">
+        <h1>Icon Maker</h1>
+        <p>
+            Select a light or dark icon (or both) and generate differente sizes
+        </p>
+        <div id="inputs">
+            <form method="dialog" id="form">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Light</th>
+                            <th>Dark</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input form="form" type="file" name="lightIcon" id="lightIcon" accept="image/*">
+                            </td>
+                            <td>
+                                <input form="form" type="file" name="darkIcon" id="darkIcon" accept="image/*">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Size</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th colspan="2">Square</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="s16_16">16x16</label>
+                            </td>
+                            <td>
+                                <input form="form" type="checkbox" name="s16_16" id="s16_16" checked>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="s32_32">32x32</label>
+                            </td>
+                            <td>
+                                <input form="form" type="checkbox" name="s32_32" id="s32_32" checked>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="s48_48">48x48</label>
+                            </td>
+                            <td>
+                                <input form="form" type="checkbox" name="s48_48" id="s48_48" checked>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="s64_64">64x64</label>
+                            </td>
+                            <td>
+                                <input form="form" type="checkbox" name="s64_64" id="s64_64" checked>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="s128_128">128x128</label>
+                            </td>
+                            <td>
+                                <input form="form" type="checkbox" name="s128_128" id="s128_128" checked>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="s300_300">300x300</label>
+                            </td>
+                            <td>
+                                <input form="form" type="checkbox" name="s300_300" id="s300_300" checked>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="s350_300">350x300</label>
+                            </td>
+                            <td>
+                                <input form="form" type="checkbox" name="s350_300" id="s350_300" checked>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="s1024_1024">1024x1024</label>
+                            </td>
+                            <td>
+                                <input form="form" type="checkbox" name="s1024_1024" id="s1024_1024" checked>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Rectangle</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="s440_280">440x280</label>
+                            </td>
+                            <td>
+                                <input form="form" type="checkbox" name="s440_280" id="s440_280" checked>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="s1280_640">1280x640</label>
+                            </td>
+                            <td>
+                                <input form="form" type="checkbox" name="s1280_640" id="s1280_640" checked>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="s1280_800">1280x800</label>
+                            </td>
+                            <td>
+                                <input form="form" type="checkbox" name="s1280_800" id="s1280_800" checked>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="s1400_560">1400x560</label>
+                            </td>
+                            <td>
+                                <input form="form" type="checkbox" name="s1400_560" id="s1400_560" checked>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="submit" value="Generate">
+                <button id="download" class="hide">
+                    <span class="material-symbols-outlined">download</span>
+                    Download
+                </button>
+            </form>
+        </div>
+    </nav>
+    <main>
+        <div id="lightContainer"></div>
+        <div id="darkContainer"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
